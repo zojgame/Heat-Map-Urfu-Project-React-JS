@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Проект от URFU, в котором предстояло создать функциональное добавление меток на карту Свердловсвой области, с учетом проведенных в школах опросах о качестве образования. Большая часть функциональности при пуле будет недоступна, из-за привязки к бэкэнду.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Техническое задание
+ Проект “Создание тепловой карты региона РФ для визуализации данных об уровне удовлетворенности граждан”
 
-## Available Scripts
+Описание функциональности
+Карта
 
-In the project directory, you can run:
+Карта по Свердловской области. При приближении метки будут разделяться(дробиться) по способу: муниципалитеты Свердловской области -> города -> районы в городе -> отдельные учебные заведения. Все это в виде тепловой карты.
+Система должна считать средний балл по 10 бальной шкале для каждого объекта и на основании него окрашивать школу и округ:
 
-### `npm start`
+от 1 до 2 – ярко красный;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+от 3 до 4 – бледно красный;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+от 5 до 6 – желтый;
 
-### `npm test`
+от 7 до 8 – бледно зеленый;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+от 9 до 10 – ярко зеленый.
 
-### `npm run build`
+необходимо выводить серую подсветку для округов и школ, по которым нет данных или данных меньше минимального количества, которую дать возможность менять через систему администрирования.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+		
+Роли пользователей
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Участники опросов
+Авторизация по почте или через гугл аккаунт
+Доступна страница с опросами
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Роли участников опросов(ученик, сотрудник школы, родитель) будет выбираться при регистрации.
+Личный кабинет
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Стейкхолдеры
+У админа будет возможность добавлять стейкхолдеров через админку он может добавить почту стейкхолдера, дальше этому стейкхолдеру нужно будет зарегистрироваться через эту почту и у него сразу будет роль стейкхолдера. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Функционал стейкхолдера: добавление опросов, добавление данных по проведенному опросу, просмотр карты, добавление пользователей и стейкхолдеров, просмотр личного кабинета 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Описание страниц
 
-## Learn More
+Страницы участника опроса:
+Регистрация/авторизация: поле ввода почты и пароля или вход через гугл аккаунт , чекбокс выбора роли пользователя(так как родитель ученика школы может преподавать в этой же школе) , до авторизации и регистрации пользователь видит пустой хедер сайта с логотипом.
+После регистрации пользователю становится доступны два раздела в хедере сайта : страница опросов - “опросы” и страница личного кабинета. 
+Страница опроса: вопросы идут по порядку, на каждый вопрос ползунок с вариантами от 1 до 10  (уровень удовлетворенности 1 - ужасно, 10 - отлично)
+Перед каждым опросом необходимо выбрать соответствующую область, город и школу из предложенных. В зависимости от роли пользователя ему будут предлагаться разные вопросы.
+Страница с опросами: плитка разных по темам опросов , например опрос о бытовом состоянии школы , удовлетворенности преподаваемых дисциплин и тд. пользователю не будут доступны темы опросов, в которых он некомпетентен ( школьнику не будет доступен опрос о степени удовлетворенности оплаты труда и тд), один опрос для одной роли.
+Личный кабинет: информация о пользователе - возраст,роль
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+        
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Страницы стейкхолдера:
+Новому стейкхолдеру на почту приходит письмо с ссылкой ,при переходе по ней его перебрасывает на страницу регистрации с двумя полями: логин (почта , на которую пришло письмо с приглашением) заполнен автоматически и паролем, который придумывает новый стейкхолдер.
+Хедер: для стейкхолдера будет доступно больше разделов в хедере , чем для обычного пользователя. Будут доступны следующие разделы: “Карта” , “ Опросы”, “Стейкхолдеры”, “Учебные заведения”,”Результаты опроса” и личный кабинет.
+Карта: слева до 1\3 экрана находятся фильтры: оценка по роли ( среднее арифметическое за все опросы по одной роли) , общая оценка (среднее арифметической за опросы по всем ролям) , а остальные 2\3 занимает интерактивная карта Свердловской области. В максимальном отдалении карта будет закрашиваться по районам соответствующими цветами к средней оценке по всем школам, при приближении будут появляться отдельные маркеры со средней оценкой школ города , также будет показан соответствующий цвет в маркере, при повторном приближении города будут выделены районы этого города и маркерами отмечена каждая отдельная школа. Приближение на данный момент будет реализовано по кнопками.
+Опросы: будет показана плитка всех созданных опросов конкретного стейкхолдера и кнопка добавления нового опроса , при открытии карточки опроса можно будет посмотреть все вопросы в этом опросе и поделиться им по Qr-коду.
+После нажатия на кнопку “создать опрос” открывается страница с полем, в которое стейкхолдер вводит тему опроса, checkbox с ролью для которой будет проходить опрос, добавление вопроса через кнопку (добавляется поле ввода вопроса, можно добавлять хоть сколько вопросов). В конце кнопка создать опрос, после этого создание опроса завершается и он становится доступным для опрашиваемых.
+Стейкхолдеры: список добавленных стейкхолдеров , состоящий из ФИО , кнопки “редактировать” и “удалить”. При нажатии на кнопку “редактировать” можно отобрать или добавить право “добавление новых стейкхолдеров” у конкретного стейкхолдера, а “удалить” полностью убирает у данного пользователя все возможности стейкхолдера. Вверху справа будет находиться кнопка “Добавить стейкхолдера” , при нажатии на нее появится модальное окно в центре экрана с затемнением , в нем  поле ввода почты для приглашения пользователя ,пункт с выбором права “разрешить приглашение других стейкхолдеров”, кнопкой “готово” и “отменить”.
+Учебные заведения:  возможность добавления нового учебного заведения с его адресом - поля: область, город, номер школы.
+Результаты опросов: таблица с двумя столбцами, в первом будет логин, во втором результаты опроса ( среднее арифметическое ).
+Фильтры справа занимают ⅓ экрана, фильтры: по области/городу/школе, по роли.
+Возможность добавления данных вручную: кнопка “добавить данные”  при нажатии  открывается страница с выбором области, города, школы, роли опрашиваемых, темы опроса и поле с вводом средней оценки каждого пользователя.
+Личный кабинет: Поля с вводом ФИО, почта, к которой привязан личный кабинет, возможность смены пароля.

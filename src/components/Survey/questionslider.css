@@ -1,0 +1,17 @@
+
+
+.MuiSlider-markLabel{
+    font-size:0.8vw!important;
+}
+
+.MuiSlider-mark{
+    height: 0.1vw;
+    width: 0.1vw;
+    background-color:white!important;
+    border-radius: 50% !important;
+    border: 2px solid gray;
+}
+
+.MuiSlider-valueLabel{
+    display: none!important;
+}

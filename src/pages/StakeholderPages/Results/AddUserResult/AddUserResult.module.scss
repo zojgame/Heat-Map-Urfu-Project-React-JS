@@ -1,0 +1,104 @@
+.header {
+  font-size: 24px;
+  color: #597EF7;
+  margin: 50px auto;
+  font-weight: 500;
+
+}
+
+.container {
+  display: flex;
+  gap: 45px;
+}
+
+.steps {
+  width: 390px;
+  margin-left: 6%;
+
+  .step {
+    margin-bottom: 3%;
+    font-size: 14px;
+    text-align: left;
+
+    .head {
+      color: rgba(0, 0, 0, 0.85);
+
+    }
+
+    .description {
+      color: rgba(0, 0, 0, 0.45);
+    }
+  }
+
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  width: 45%;
+
+  .blockItem {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .checkboxes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .marks {
+    //display: flex;
+    //flex-direction: row;
+    //align-items: end;
+    width: 300px;
+    text-align: left;
+
+    .textField {
+      margin-bottom: 15px;
+
+      &:checked {
+        border: 1px solid #1890FF;
+      }
+    }
+
+    .addButton {
+      background: #F5F5F5;
+      width: 46px;
+      height: 24px;
+
+      border: 1px solid #D9D9D9;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      float: right;
+      position: relative;
+      bottom: -15px;
+
+      .icon {
+        color: white;
+      }
+
+      &_active {
+        background-color: #096DD9;
+        color: white;
+
+        &:hover {
+          background-color: #4285EB;
+        }
+      }
+    }
+  }
+
+  .publishButton {
+    width: 126px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+}

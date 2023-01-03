@@ -1,0 +1,31 @@
+.pageContainer {
+  padding: 1.5vw 8vw;
+}
+
+.pageTitle {
+  margin-bottom: 4vh;
+  display: flex;
+
+  h1 {
+    color: #597EF7;
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  .buttonAdd {
+    width: 220px;
+    height: 38px;
+    font-size: 14px;
+    align-self: center;
+    font-size: 14px;
+  }
+}
+
+.body {
+  .table {
+    width: 80%;
+    display: inline-table;
+  }
+}

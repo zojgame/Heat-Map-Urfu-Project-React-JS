@@ -1,0 +1,18 @@
+.modal {
+  width: 416px;
+  height: 166px;
+  padding: 32px 24px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+}
+.modal .btn {
+  width: 50px;
+  height: 32px;
+  background-color: #1890FF;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+/*# sourceMappingURL=ModalWindow.module.css.map */

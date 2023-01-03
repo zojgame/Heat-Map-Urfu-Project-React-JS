@@ -1,0 +1,96 @@
+.container {
+  width: 1000px;
+  height: 800px;
+
+  margin: 50px auto 0;
+}
+
+
+/*#region Cluster_styles*/
+.mycluster {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;    
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mycluster::before {
+  content: '';
+  right: 12.5%;
+  top: 12.5%;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.circle{
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  right: 25%;
+  top: 25%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.151);
+  border-radius: 50%;
+  z-index: 200;
+}
+
+.circle span{
+  display: block;
+  margin-top: 14%;
+}
+/*#endregion Cluster_styles*/
+
+// #region Marker_styles
+.mymarker {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;    
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress{
+  background: conic-gradient(rgb(255, 255, 255, 1) 0deg, green 0deg);
+}
+
+.mymarker::before {
+  content: '';
+  right: 12.5%;
+  top: 12.5%;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.div_circle{
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  right: 0%;
+  top: 10%;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  z-index: 200;
+}
+
+.div_circle span{
+  display: block;
+  margin-top: 14%;
+}
+
+// #endregion Marker_styles
+

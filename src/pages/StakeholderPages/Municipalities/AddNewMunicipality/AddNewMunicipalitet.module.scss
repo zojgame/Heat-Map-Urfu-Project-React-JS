@@ -1,0 +1,50 @@
+.header {
+  font-size: 24px;
+  color: #597EF7;
+  margin: 50px auto;
+  font-weight: 500;
+
+}
+
+.container {
+  display: flex;
+  gap: 45px;
+}
+
+.steps {
+  width: 390px;
+  margin-left: 6%;
+
+  .step {
+    margin-bottom: 3%;
+    font-size: 14px;
+    text-align: left;
+
+    .head {
+      color: rgba(0, 0, 0, 0.85);
+
+    }
+
+    .description {
+      color: rgba(0, 0, 0, 0.45);
+    }
+  }
+
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  gap: 70px;
+
+}
+
+.publishButton {
+  width: 126px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+

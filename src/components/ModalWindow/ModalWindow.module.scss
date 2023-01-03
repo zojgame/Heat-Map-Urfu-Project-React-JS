@@ -1,0 +1,44 @@
+.modal {
+  width: 416px;
+  height: 166px;
+  padding: 32px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin: 10% auto auto;
+
+  img {
+    position: absolute;
+  }
+
+  .head {
+    font-weight: 500;
+    margin-left: 38px;
+    margin-bottom: 8px;
+  }
+
+  .desc {
+    font-size: 14px;
+    margin-left: 38px;
+  }
+
+  .btn {
+    width: 50px;
+    height: 32px;
+    background-color: #1890FF;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-left: auto;
+
+
+    &:hover {
+      background-color: #0771ce;
+      cursor: pointer;
+    }
+  }
+}
